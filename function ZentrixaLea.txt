@@ -1,0 +1,299 @@
+export default function ZentrixaLearningHub() { const sections = [ { title: 'Home', description: 'Hero banner, slogan, CTA buttons, and quick introduction to the platform.', }, { title: 'Courses', description: 'Display AI, Web Development, UI/UX, and Cybersecurity learning tracks with modern course cards.', }, { title: 'Programs', description: 'Highlight internships, mentorships, workshops, and bootcamps.', }, { title: 'Join Now', description: 'Interactive registration form with smooth validation-ready layout.', }, { title: 'Footer', description: 'Contact details, social links, operating hours, and quick navigation.', }, ];
+
+const courses = [ { title: 'Artificial Intelligence', level: 'Advanced', description: 'Learn machine learning, deep learning, and practical AI workflows.', }, { title: 'Web Development', level: 'Beginner', description: 'Build modern responsive websites using HTML, CSS, JavaScript, and React.', }, { title: 'Cyber Security', level: 'Intermediate', description: 'Understand ethical hacking, network security, and digital defense.', }, { title: 'UI/UX Design', level: 'Beginner', description: 'Design intuitive interfaces and delightful user experiences.', }, ];
+
+const programs = [ 'Remote Internship Program', 'Industry Mentorship Sessions', 'Weekend Coding Bootcamp', 'Career Development Workshops', ];
+
+return ( <div className="min-h-screen bg-slate-950 text-white font-sans"> <header className="border-b border-slate-800 sticky top-0 z-50 bg-slate-950/90 backdrop-blur"> <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"> <div> <h1 className="text-2xl font-bold tracking-wide text-cyan-400">Zentrixa Learning Hub</h1> <p className="text-sm text-slate-400">Learn Fast. Learn Smart.</p> </div>
+
+<nav className="hidden md:flex gap-6 text-sm text-slate-300">
+        <a href="#home" className="hover:text-cyan-400 transition">Home</a>
+        <a href="#courses" className="hover:text-cyan-400 transition">Courses</a>
+        <a href="#programs" className="hover:text-cyan-400 transition">Programs</a>
+        <a href="#join" className="hover:text-cyan-400 transition">Join Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section
+      id="home"
+      className="relative overflow-hidden border-b border-slate-800"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/10 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center relative">
+        <div>
+          <span className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-sm mb-6">
+            Future-Ready Education Platform
+          </span>
+
+          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+            Shape Your Future With <span className="text-cyan-400">Tech Skills</span>
+          </h2>
+
+          <p className="text-slate-300 text-lg leading-8 mb-8 max-w-2xl">
+            Zentrixa Learning Hub is a fictional educational platform focused on AI, web development, UI/UX design, and cybersecurity. This project showcases a clean, responsive, and modern frontend experience.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <button className="px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-slate-950 font-semibold shadow-xl shadow-cyan-500/20">
+              Explore Courses
+            </button>
+
+            <button className="px-6 py-3 rounded-2xl border border-slate-700 hover:border-cyan-400 hover:text-cyan-400 transition">
+              Join Internship
+            </button>
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-5">
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-xl font-semibold mb-3">AI & Machine Learning</h3>
+            <p className="text-slate-400 text-sm leading-6">
+              Practical AI learning paths with hands-on projects and mentorship.
+            </p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl mt-10">
+            <div className="text-4xl mb-4">💻</div>
+            <h3 className="text-xl font-semibold mb-3">Frontend Development</h3>
+            <p className="text-slate-400 text-sm leading-6">
+              Build interactive responsive websites using modern technologies.
+            </p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl">
+            <div className="text-4xl mb-4">🎨</div>
+            <h3 className="text-xl font-semibold mb-3">UI/UX Design</h3>
+            <p className="text-slate-400 text-sm leading-6">
+              Design elegant digital experiences with user-first principles.
+            </p>
+          </div>
+
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl mt-10">
+            <div className="text-4xl mb-4">🛡️</div>
+            <h3 className="text-xl font-semibold mb-3">Cyber Security</h3>
+            <p className="text-slate-400 text-sm leading-6">
+              Learn ethical hacking, security awareness, and online protection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="max-w-7xl mx-auto px-6 py-20">
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-bold mb-4">Website Requirements</h2>
+        <p className="text-slate-400 max-w-2xl mx-auto">
+          Fully responsive layout with modern sections, smooth interactions, and consistent design aesthetics.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-5">
+        {sections.map((item) => (
+          <div
+            key={item.title}
+            className="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-cyan-400/50 transition"
+          >
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">{item.title}</h3>
+            <p className="text-sm text-slate-400 leading-6">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="courses" className="bg-slate-900/50 border-y border-slate-800">
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+          <div>
+            <h2 className="text-4xl font-bold mb-4">Featured Courses</h2>
+            <p className="text-slate-400 max-w-2xl">
+              Explore future-focused learning paths designed for beginners and professionals.
+            </p>
+          </div>
+
+          <div className="px-5 py-3 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-sm">
+            Responsive • Modern • Interactive
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {courses.map((course) => (
+            <div
+              key={course.title}
+              className="rounded-3xl border border-slate-800 bg-slate-950 p-6 hover:-translate-y-2 transition duration-300 shadow-xl"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs px-3 py-2 rounded-full bg-slate-800 text-slate-300">
+                  {course.level}
+                </span>
+                <span className="text-cyan-400 text-xl">★</span>
+              </div>
+
+              <h3 className="text-2xl font-semibold mb-4">{course.title}</h3>
+              <p className="text-slate-400 text-sm leading-6 mb-8">
+                {course.description}
+              </p>
+
+              <button className="w-full py-3 rounded-2xl bg-slate-900 border border-slate-700 hover:border-cyan-400 hover:text-cyan-400 transition">
+                Learn More
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" className="max-w-7xl mx-auto px-6 py-20">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-4xl font-bold mb-6">Programs & Opportunities</h2>
+          <p className="text-slate-400 leading-8 mb-8">
+            Participate in internships, mentorships, and collaborative learning experiences tailored for aspiring tech professionals.
+          </p>
+
+          <div className="space-y-4">
+            {programs.map((program) => (
+              <div
+                key={program}
+                className="flex items-center gap-4 bg-slate-900 border border-slate-800 rounded-2xl p-5"
+              >
+                <div className="w-11 h-11 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-lg">
+                  ✓
+                </div>
+                <span className="text-slate-200">{program}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-slate-800 rounded-[2rem] p-8">
+          <div className="grid grid-cols-2 gap-5">
+            <div className="bg-slate-950 rounded-3xl p-6 border border-slate-800">
+              <div className="text-4xl font-bold text-cyan-400">15K+</div>
+              <p className="text-slate-400 mt-2">Students Enrolled</p>
+            </div>
+
+            <div className="bg-slate-950 rounded-3xl p-6 border border-slate-800">
+              <div className="text-4xl font-bold text-cyan-400">120+</div>
+              <p className="text-slate-400 mt-2">Industry Mentors</p>
+            </div>
+
+            <div className="bg-slate-950 rounded-3xl p-6 border border-slate-800">
+              <div className="text-4xl font-bold text-cyan-400">96%</div>
+              <p className="text-slate-400 mt-2">Satisfaction Rate</p>
+            </div>
+
+            <div className="bg-slate-950 rounded-3xl p-6 border border-slate-800">
+              <div className="text-4xl font-bold text-cyan-400">24/7</div>
+              <p className="text-slate-400 mt-2">Online Access</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" className="bg-slate-900/50 border-t border-slate-800">
+      <div className="max-w-4xl mx-auto px-6 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Join Zentrixa Today</h2>
+          <p className="text-slate-400">
+            Start your learning journey with our career-focused educational programs.
+          </p>
+        </div>
+
+        <form className="grid md:grid-cols-2 gap-6 bg-slate-950 border border-slate-800 rounded-[2rem] p-8 shadow-2xl">
+          <div>
+            <label className="block text-sm text-slate-400 mb-2">Full Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              className="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm text-slate-400 mb-2">Email Address</label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              className="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm text-slate-400 mb-2">Select Program</label>
+            <select className="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400">
+              <option>AI Internship</option>
+              <option>Frontend Development</option>
+              <option>Cyber Security</option>
+              <option>UI/UX Design</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm text-slate-400 mb-2">Phone Number</label>
+            <input
+              type="tel"
+              placeholder="+1 234 567 890"
+              className="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400"
+            />
+          </div>
+
+          <div className="md:col-span-2">
+            <label className="block text-sm text-slate-400 mb-2">Message</label>
+            <textarea
+              rows="5"
+              placeholder="Tell us about your goals..."
+              className="w-full px-4 py-3 rounded-2xl bg-slate-900 border border-slate-700 focus:outline-none focus:border-cyan-400"
+            />
+          </div>
+
+          <div className="md:col-span-2">
+            <button className="w-full py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-slate-950 font-bold text-lg">
+              Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer className="border-t border-slate-800">
+    <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 className="text-2xl font-bold text-cyan-400 mb-4">Zentrixa Learning Hub</h3>
+        <p className="text-slate-400 leading-7">
+          A fictional modern education platform designed to inspire learning, creativity, and innovation.
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Company Details</h4>
+        <ul className="space-y-3 text-slate-400 text-sm">
+          <li>Operating Hours: 10:00 AM – 5:00 PM</li>
+          <li>Email: hello@zentrixa.tech</li>
+          <li>Service Focus: Student Learning & Certifications</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+        <div className="flex flex-col gap-3 text-sm text-slate-400">
+          <a href="#home" className="hover:text-cyan-400 transition">Home</a>
+          <a href="#courses" className="hover:text-cyan-400 transition">Courses</a>
+          <a href="#programs" className="hover:text-cyan-400 transition">Programs</a>
+          <a href="#join" className="hover:text-cyan-400 transition">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
+      © 2025 Zentrixa Learning Hub. Designed for the IBI Front-End Task.
+    </div>
+  </footer>
+</div>
+
+); }
